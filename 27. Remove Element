@@ -1,0 +1,17 @@
+class Solution {
+    public int removeElement(int[] nums, int val) {
+        int index = 0; // index to track the position where non-val elements will be placed
+        
+        // Iterate through the array
+        for (int i = 0; i < nums.length; i++) {
+            // If the current element is not equal to val, move it to the index position
+            if (nums[i] != val) {
+                nums[index] = nums[i];
+                index++;
+            }
+        }
+        
+        // The length of the array up to index will contain non-val elements
+        return index;
+    }
+}
